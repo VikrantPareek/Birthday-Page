@@ -8,7 +8,6 @@
       body {
         margin: 0;
         padding: 0;
-        overflow: hidden;
         font-family: "Segoe UI", sans-serif;
         background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
         color: #333;
@@ -151,6 +150,56 @@
       .notBirthday {
         display: none;
       }
+      /* Small devices (phones, less than 600px) */
+      @media (max-width: 600px) {
+        .card {
+          padding: 20px;
+          width: 90%;
+        }
+
+        .card h1 {
+          font-size: 1.8rem;
+        }
+
+        .card p {
+          font-size: 1rem;
+        }
+
+        .cake {
+          font-size: 3rem;
+        }
+
+        video {
+          width: 100%;
+          height: auto;
+        }
+
+        .balloon,
+        .heart {
+          font-size: 2.5rem;
+        }
+      }
+
+      /* Medium devices (tablets, 600px to 900px) */
+      @media (min-width: 601px) and (max-width: 900px) {
+        .card {
+          padding: 25px;
+          width: 80%;
+        }
+
+        .card h1 {
+          font-size: 2.2rem;
+        }
+
+        .cake {
+          font-size: 3.5rem;
+        }
+
+        video {
+          width: 100%;
+          height: auto;
+        }
+      }
     </style>
   </head>
   <body>
@@ -172,7 +221,15 @@
       <div class="cake">🎂</div>
       <h1>Happy Birthday, <%= username.toUpperCase() %> !</h1>
       <p>Wishing you joy, love, and cake on your special day! 🎉</p>
-      <video width="640" height="360" autoplay muted loop controls>
+      <video
+        width="640"
+        height="360"
+        autoplay
+        muted
+        loop
+        controls
+        preload="auto"
+      >
         <source src="/Vanshika.mp4" type="video/mp4" />
       </video>
     </div>
